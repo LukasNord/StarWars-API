@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const gameRouter = require('./routes/game.router');
+
 
 
 /** ---------- MIDDLEWARE ---------- **/
@@ -10,7 +10,7 @@ app.use(bodyParser.json()); // needed for angular requests
 
 /** ---------- EXPRESS ROUTES ---------- **/
 
-app.use('/games', gameRouter);
+//app.use('/games', gameRouter);
 
 
 
