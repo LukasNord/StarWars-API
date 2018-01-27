@@ -1,20 +1,17 @@
-var app = angular.module('myApp', []);
+var myApp = angular.module('myApp','ngRoute', [ngRoute]);
 
 myApp.config(function($routeProvider) {
     console.log('config loaded');
     // define our client side routes
     $routeProvider
-        .when('/employee-list', {
-            templateUrl: '/views/employee-list.html',
-            controller: 'TrackEmployeeController as vm'
+        .when('/search', {
+            templateUrl: '/views/search.html',
+            controller: 'SearchController as vm'
         })
-        .when('/add-employee', {
-            templateUrl: '/views/add-employee.html',
-            controller: 'AddEmployeeController as vm'
-        })
-        .when('/reports', {
-            templateUrl: '/views/reports.html',
-            controller: 'ReportController as vm'
+        
+        .when('/favorites', {
+            templateUrl: '/views/favorites.html',
+            controller: 'FavoritesController as vm'
         })
         .when('/home', {
             templateUrl: '/views/home.html',
