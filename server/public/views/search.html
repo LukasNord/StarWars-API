@@ -3,12 +3,12 @@
     <button ng-click="vm.searchFor(vm.selectedOption)">Search</button>
     <div>
         <form validate name="searchForm">
-                <select  name="searchInput" ng-model="vm.selectedOption" ng-options="option.label for option in vm.options.values" required>
+                <select  name="searchInput" ng-model="vm.selectedOption" ng-options="option.label for option in vm.options" required>
                         <option value="">-- Please Choose a Resource --</option>
                 </select>
             
             <div>
-                <label >Search for:</label> <input type="text" ng-model="vm.searchValue" placeholder="search" required >
+                <label >Search for:</label> <input type="text" ng-model="vm.selectedOption.searchValue" placeholder="search" required >
             </div>
         </form>
     <div>
@@ -26,7 +26,7 @@
                 <label>Starships:</label><ul><li ng-repeat="ship in result.starships"> <a href="{{ship}}">{{ship}}</a></li></ul><br>
                 <label>Vehicles:</label><ul><li ng-repeat="vehicle in result.vehicles"> <a href="{{vehicle}}">{{vehicle}}</a></li></ul><br>
                 <label>Films:</label><ul><li ng-repeat="film in result.films"> <a href="{{film}}">{{film}}</a></li></ul>
-                <button ng-click="vm.addToFavorites(result)">Add to Favorites</button>
+                <button ng-click="vm.addToFavorites(result, vm.selectedOption)">Add to Favorites</button>
             </div>
         </div> 
         <div ng-if="vm.toggle.films">

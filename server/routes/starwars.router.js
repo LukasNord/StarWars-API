@@ -5,11 +5,12 @@ const mongoose = require('mongoose');
 //Define our Schema- how an object should look when stored in our collection
 let starWarsSchema = new mongoose.Schema(  
       //schema method takes in an object.
-    {
-        name: String,
-        title: String
+    {   
+       
+
             
-    }
+    }, { strict: false }
+
 );//end Schema
 
 //Define our Model
@@ -32,13 +33,18 @@ router.post('/', (req, res) => {
 }); // end pos
 
 
-router.get('/', (req,res)=>{
-//find all in database
-    StarWarsFavorite.find({}, (error, data)=>{
+router.get('/:label', (req,res)=>{
+    let label = req.params.label;
+     console.log('label: ', label);
+     
+//find all in database based on label
+    StarWarsFavorite.find({"label": label }, (error, data)=>{
         if (error) {
-            console.log('error on save: ', error);
+            console.log(,'label: ', label, 'error on find: ', error);
             res.sendStatus(500);
         } else {
+            console.log('get all favorites: ', data);
+            
             res.send(data);
         }
     });

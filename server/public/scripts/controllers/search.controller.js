@@ -5,19 +5,16 @@ myApp.controller('SearchController', [ 'SwapiService', function(SwapiService){
 //results from API call to be displayed on DOM.
     self.searchResults = SwapiService.searchResults;
 //options tree for select
-    self.options = {
-        type: 'select',
-        name: 'People',
-        value: 'people',
-        values: [
+    self.options = [
+       
                 {label:'Films', resource: 'films'},
                 {label: 'People', resource: 'people'},
                 {label: 'Planets', resource: 'planets'},
                 {label:'Species', resource: 'species'},
                 {label:'Starships', resource: 'starships'},
                 {label:'Vehicles', resource: 'vehicles'}
-            ],
-        };
+            
+    ];
 
 
 //Control for showing card based on resource
@@ -36,6 +33,7 @@ myApp.controller('SearchController', [ 'SwapiService', function(SwapiService){
     self.searchFor = function(selectedOption){
         
         //validation
+        
         
         //logic to control toggle.
             
@@ -98,10 +96,12 @@ myApp.controller('SearchController', [ 'SwapiService', function(SwapiService){
 //add to favorites
 
     self.addToFavorites = function(favorite){
-
-        SwapiService.addToFavorites(favorite);
         
-
+        //add label property to object for easier sorting in the database.
+        favorite.label = self.selectedOption.resource;
+        
+        
+        SwapiService.addToFavorites(favorite);
     }
 // custom num to string filter
 
