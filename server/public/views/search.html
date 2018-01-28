@@ -1,0 +1,56 @@
+<div>
+    <h1>Search View</h1>
+    <button ng-click="vm.searchFor(vm.selectedOption)">Search</button>
+    <div>
+
+        <select  ng-model="vm.selectedOption" ng-options="option.label for option in vm.options"></select>
+     </div>
+     <div>
+        <label >Search for:</label> <input type="text" ng-model="vm.searchValue" placeholder="search">
+    </div>
+    <div class = "results-container">
+        <div ng-if="vm.toggle.show">
+            <div ng-repeat="result in vm.searchResults.list">
+                <label>Name:</label> <label>{{result.name}}</label><br>
+                <label>Birth Year:</label> <label>{{result.birth_year}}</label><br>
+                <label>Eye Color:</label> <label>{{result.eye_color}}</label><br>
+                <label>Gender:</label> <label>{{result.gender}}</label><br>
+                <label>Hair Color:</label> <label>{{result.hair_color}}</label><br>
+                <label>Height:</label> <label>{{result.height}}</label><br>
+                <label>homeworld:</label> <a href="{{result.homeworld}}">{{result.homeworld}}</a><br>
+                <label>Mass:</label> <label>{{result.mass}}</label><br>
+                <label>Species:</label> <label>{{result.species}}</label><br>
+                <label>Starships:</label><ul><li ng-repeat="ship in result.starships"> <a href="{{ship}}">{{ship}}</a></li></ul><br>
+                <label>Vehicles:</label><ul><li ng-repeat="vehicle in result.vehicles"> <a href="{{vehicle}}">{{vehicle}}</a></li></ul><br>
+                <label>Films:</label><ul><li ng-repeat="film in result.films"> <a href="{{film}}">{{film}}</a></li> </ul>
+            </div>
+        </div>    
+    </div>
+</div>
+
+<!-- "birth_year": "19 BBY",
+    "eye_color": "Blue",
+    "films": [
+        "https://swapi.co/api/films/1/",
+        ...
+    ],
+    "gender": "Male",
+    "hair_color": "Blond",
+    "height": "172",
+    "homeworld": "https://swapi.co/api/planets/1/",
+    "mass": "77",
+    "name": "Luke Skywalker",
+    "skin_color": "Fair",
+    "created": "2014-12-09T13:50:51.644000Z",
+    "edited": "2014-12-10T13:52:43.172000Z",
+    "species": [
+        "https://swapi.co/api/species/1/"
+    ],
+    "starships": [
+        "https://swapi.co/api/starships/12/",
+        ...
+    ],
+    "url": "https://swapi.co/api/people/1/",
+    "vehicles": [
+        "https://swapi.co/api/vehicles/14/"
+        ... -->
