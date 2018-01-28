@@ -21,6 +21,20 @@ myApp.service('SwapiService', ['$http', function($http){
     };
 
 
+    //Save resource to favorites
+
+    self.addToFavorites = function(favorite){
+        $http.post('/favorites', favorite)
+            .then(function(response) {
+                console.log('post response', response);
+            })
+                .catch(function (response) {
+                console.log('error on post', response);
+            });
+
+
+
+    }
 
 
 

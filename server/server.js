@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-
+const starWarsRouter = require('./routes/starwars.router');
 
 
 /** ---------- MIDDLEWARE ---------- **/
@@ -10,7 +10,7 @@ app.use(bodyParser.json()); // needed for angular requests
 
 /** ---------- EXPRESS ROUTES ---------- **/
 
-//app.use('/games', gameRouter);
+app.use('/favorites', starWarsRouter);
 
 
 
