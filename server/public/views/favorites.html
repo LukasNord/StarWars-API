@@ -5,7 +5,7 @@
 <div class="flex-container wrap">
     
     <div class ="results-card" ng-repeat="favorite in vm.favorites.people.list">
-        <button ng-click="vm.deleteFavorite(favorite)">Delete Favorite</button>
+        <button class="delete-btn" ng-click="vm.deleteFavorite(favorite)">Delete Favorite</button>
         <label>Name:</label> <span>{{favorite.name}}</span><br>
         <label>Birth Year:</label> <span>{{favorite.birth_year}}</span><br>
         <label>Eye Color:</label> <span>{{favorite.eye_color}}</span><br>
@@ -21,8 +21,8 @@
 <h2>Species</h2>
 <div class="flex-container wrap"> 
     
-    <div class ="results-card" ng-repeat="favorite in vm.favorites.species.list">
-        <button ng-click="vm.deleteFavorite(favorite)">Delete Favorite</button>
+    <div class="results-card" ng-repeat="favorite in vm.favorites.species.list">
+        <button class="delete-btn" ng-click="vm.deleteFavorite(favorite)">Delete Favorite</button>
         <label>Name:</label> <span>{{favorite.name}}</span><br>
             <label>Classification:</label> <span>{{favorite.classification}}</span><br>
             <label>Designation:</label> <span>{{favorite.designation}}</span><br>
@@ -38,7 +38,7 @@
 <div class="flex-container wrap">
     
     <div class ="results-card" ng-repeat="favorite in vm.favorites.planets.list">
-        <button ng-click="vm.deleteFavorite(favorite)">Delete Favorite</button>
+        <button class="delete-btn" ng-click="vm.deleteFavorite(favorite)">Delete Favorite</button>
         <label>Name:</label> <span>{{favorite.name}}</span><br>
             <label>Diameter:</label> <span>{{favorite.diameter}}</span><br>
             <label>Rotation Period:</label> <span>{{favorite.rotation_period}}</span><br>
@@ -55,7 +55,7 @@
 <div class="flex-container wrap">
     
     <div class ="results-card" ng-repeat="favorite in vm.favorites.starships.list">
-       <button ng-click="vm.deleteFavorite(favorite)">Delete Favorite</button>
+       <button class="delete-btn" ng-click="vm.deleteFavorite(favorite)">Delete Favorite</button>
         <label>Name:</label> <span>{{favorite.name}}</span><br>
             <label>Model:</label> <span>{{favorite.model}}</span><br>
             <label>Starship labels:</label> <span>{{favorite.starship_class}}</span><br>
@@ -71,8 +71,8 @@
 <h2>Vehicles</h2>
 <div class="flex-container wrap">
     
-    <div class ="results-card" ng-repeat="favorite in vm.favorites.vehicles.list">
-        <button ng-click="vm.deleteFavorite(favorite)">Delete Favorite</button>
+    <div class="results-card" ng-repeat="favorite in vm.favorites.vehicles.list" flex>
+        <button class="delete-btn" ng-click="vm.deleteFavorite(favorite)">Delete Favorite</button>
         <label>Name:</label> <span>{{favorite.name}}</span><br>
         <label>Model:</label> <span>{{favorite.model}}</span><br>
         <label>Vehicle Class:</label> <span>{{favorite.vehicle_class}}</span><br>
@@ -88,8 +88,8 @@
 <h2>Films</h2>
 <div class="flex-container wrap">
     
-    <div class ="results-card" ng-repeat="favorite in vm.favorites.films.list">
-        <button ng-click="vm.deleteFavorite(favorite)">Delete Favorite</button>
+    <div class ="results-card" ng-repeat="favorite in vm.favorites.films.list" flex>
+        <button class="delete-btn" ng-click="vm.deleteFavorite(favorite)">Delete Favorite</button>
         <label>Title:</label> <span>{{favorite.title}}</span><br>
         <label>Episode ID:</label> <span>{{favorite.episode_id}}</span><br>
         <label>Opening Crawl:</label> <span>{{favorite.opening_crawl}}</span><br>
