@@ -19,6 +19,4 @@ myApp.controller('FavoritesController', ['SwapiService', function(SwapiService){
 
     }
 
-    
-
 }]);

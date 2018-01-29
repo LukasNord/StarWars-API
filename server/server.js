@@ -21,7 +21,14 @@ app.use('/favorites', starWarsRouter);
 const mongoose = require('mongoose');
 //gamestop is the name of our database 
 //27017 is the default mongo port number
-const databaseUrl = 'mongodb://localhost:27017/swapi';
+const databaseUrl = process.env.MONGODB_URI || 'mongodb://localhost:27017/swapi';
+//MLAB Connection is covered by the process.env.MONGODB_URI variable.
+ 
+
+
+
+
+
 //connect to mongoDB
 mongoose.connect(databaseUrl);
 
