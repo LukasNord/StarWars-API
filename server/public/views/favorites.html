@@ -23,7 +23,7 @@
     
     <div class ="results-card" ng-repeat="favorite in vm.favorites.species.list">
         <button ng-click="vm.deleteFavorite(favorite)">Delete Favorite</button>
-        <label>Name:</label> <label>{{favorite.name}}</label><br>
+        <label>Name:</label> <span>{{favorite.name}}</span><br>
             <label>Classification:</label> <span>{{favorite.classification}}</span><br>
             <label>Designation:</label> <span>{{favorite.designation}}</span><br>
             <label>Average Height:</label> <span>{{favorite.average_height}}</span><br>
@@ -75,14 +75,14 @@
         <button ng-click="vm.deleteFavorite(favorite)">Delete Favorite</button>
         <label>Name:</label> <span>{{favorite.name}}</span><br>
         <label>Model:</label> <span>{{favorite.model}}</span><br>
-        <label>Vehicle Clabel:</label> <span>{{favorite.vehicle_class}}</span><br>
-        <label>Manufactur</label><span>{{favorite.manufacturer}}</span><br>
-        <label>Cost in Crelabel:</label><span>{{favorite.cost_in_credits}}</span><br>
-        <label>Length:</label><span>{{labelrite.length}}</span><br>
-        <label>Crew:</label><span>{{favolabel.crew}}</span><br>
+        <label>Vehicle Class:</label> <span>{{favorite.vehicle_class}}</span><br>
+        <label>Manufacturer:</label><span>{{favorite.manufacturer}}</span><br>
+        <label>Cost in Credits:</label><span>{{favorite.cost_in_credits}}</span><br>
+        <label>Length:</label><span>{{favorite.length}}</span><br>
+        <label>Crew:</label><span>{{favorite.crew}}</span><br>
         <label>Max Atmospherial Speed:</label><span>{{favorite.max_atmosphering_speed}}</span><br>
-        <label>Hyperdrive Rating</label><span>{favorite.hyperdrive_rating}}</span><br>
-        <label>Cargo Capacity:<labeln> <span>{{labelrite.cargo_capacity}}</span><br>
+        <label>Hyperdrive Rating:</label><span>{favorite.hyperdrive_rating}}</span><br>
+        <label>Cargo Capacity:<labeln> <span>{{favorite.cargo_capacity}}</span><br>
     </div>
 </div>
 <h2>Films</h2>

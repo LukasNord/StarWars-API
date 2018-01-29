@@ -47,12 +47,12 @@
         <div ng-if="vm.toggle.species" class="flex-container wrap" >
             
             <div class ="results-card" ng-repeat="result in vm.searchResults.list" flex>
-                    <label>Name:</label> <label>{{result.name}}</label><br>
+                    <label>Name:</label> <span>{{result.name}}</span><br>
                     <label>Classification:</label> <span>{{result.classification}}</span><br>
-                    <label>Designation:</label> <span>{{result.designation}}</laspanbr>
-                    <label>Average Height:</label> <span>{{result.average_height}}spanel><br>
+                    <label>Designation:</label> <span>{{result.designation}}</span><br>
+                    <label>Average Height:</label> <span>{{result.average_height}}<span><br>
                     <label>Skin Colors:</label> <span>{{result.skin_colors}}</span><br>
-                    <label>Hair Colors:</label> <span>{{result.hair_colors}}</label><br>
+                    <label>Hair Colors:</label> <span>{{result.hair_colors}}</span><br>
                     <label>Homeworld:</label> <span>{{result.homeworld}}</span><br>
                     <label>Language:</label> <span>{{result.language}}</span><br>
                     <label>People:</label><ul><li ng-repeat="person in result.people"> <a href="{{person}}">{{person}}</a></li></ul><br>
@@ -65,14 +65,14 @@
             <div class ="results-card" ng-repeat="result in vm.searchResults.list" flex>
                     <label>Name:</label> <span>{{result.name}}</span><br>
                     <label>Model:</label> <span>{{result.model}}</span><br>
-                    <label>Starship Class:</label> <span>{{result.starshipspans}}</label><br>
-                    <label>Manufacturer:</label> <span>{{result.manufacspan}}</label><br>
-                    <label>Cost in Credits:</label> <span>{{result.cost_ispandits}}</label><br>
-                    <label>Length:</label> <span>{{result.lengtspanlabel><br>
-                    <label>Crew:</label> <span>{{result.crewspanabel><br>
-                    <label>Max Atmosphering Speed:</label> <span>{{result.maxspansphering_speed}}</label><br>
-                    <label>Hyperdrive Rating:</label> <span>{{result.hyspanive_rating}}</label><br>
-                    <label>Cargo Capacity:</label> <span>{{result.cspancapacity}}</label><br>
+                    <label>Starship Class:</label> <span>{{result.starship_class}}</span><br>
+                    <label>Manufacturer:</label> <span>{{result.manufacturer}}</span><br>
+                    <label>Cost in Credits:</label> <span>{{result.cost_in_credits}}</span><br>
+                    <label>Length:</label> <span>{{result.length}}<span><br>
+                    <label>Crew:</label> <span>{{result.crew}}<span><br>
+                    <label>Max Atmosphering Speed:</label> <span>{{result.max_atmosphering_speed}}</span><br>
+                    <label>Hyperdrive Rating:</label> <span>{{result.hyperdrive_rating}}</span><br>
+                    <label>Cargo Capacity:</label> <span>{{result.capacity}}</span><br>
                     <label>Films:</label><ul><li ng-repeat="film in result.films"> <a href="{{film}}">{{film}}</a></li></ul><br>
                     <button ng-click="vm.addToFavorites(result)">Add to Favorites</button>
             </div>
@@ -81,13 +81,13 @@
             
             <div class ="results-card" ng-repeat="result in vm.searchResults.list">
                     <label>Name:</label> <span>{{result.name}}</span><br>
-                    <label>Model:</label> <span>{{result.model}}><br>
+                    <label>Model:</label> <span>{{result.model}}<br>
                     <label>Vehicle Class:</label> <span>{{result.vehicle_class}}</label><br>
                     <label>Manufacturer:</label> <span>{{result.manufacturer}}</label><br>
                     <label>Cost in Credits:</label> <span>{{result.cost_in_credits}}</label><br>
                     <label>Length:</label> <span>{{result.length}}</label><br>
-                    <label>Crew:</label> <span>{{result.crew}}</label><br>
-                    <label>Max Atmosphering Speed:</label> <span>{{result.max_atmosphering_speed}}</label><br>
+                    <label>Crew:</label> <span>{{result.crew}}</span><br>
+                    <label>Max Atmosphering Speed:</label> <span>{{result.max_atmosphering_speed}}</span><br>
                     <label>Cargo Capacity:</label> <span>{{result_capacity}}</label><br>
                     <label>Films:</label><ul><li ng-repeat="film in result.films"> <a href="{{film}}">{{film}}</a></li></ul><br>
                     <button ng-click="vm.addToFavorites(result)">Add to Favorites</button>
@@ -97,15 +97,15 @@
             
             <div class ="results-card" ng-repeat="result in vm.searchResults.list">
                     <label>Name:</label> <span>{{result.name}}</span><br>
-                    <label>Diameter:</label> <span>{{result.diametespanlabel><br>
-                    <label>Rotation Period:</label> <span>{{result.rotatispanriod}}</label><br>
-                    <label>Orbital Period:</label> <span>{{result.orbitspanriod}}</label><br>
+                    <label>Diameter:</label> <span>{{result.diameter}}<span><br>
+                    <label>Rotation Period:</label> <span>{{result.rotation_period}}</span><br>
+                    <label>Orbital Period:</label> <span>{{result.orbit_period}}</span><br>
                     <label>Gravity:</label> <span>{{result.gravity}}</span><br>
-                    <label>Population:</label> <span>{{result.populationspanabel><br>
-                    <label>Climate:</label> <span>{{result.climate}}spanel><br>
-                    <label>Terrain:</label> <span>{{result.terrain}spanbel><br>
-                    <label>Surface Water:</label> <span>{{result.surfacespanr}}</label><br>
-                    <label>Residents:</label> <span>{{result.residespan</label><br>
+                    <label>Population:</label> <span>{{result.population}}<span><br>
+                    <label>Climate:</label> <span>{{result.climate}}<span><br>
+                    <label>Terrain:</label> <span>{{result.terrain}}<span><br>
+                    <label>Surface Water:</label> <span>{{result.surface_water}}</span><br>
+                    <label>Residents:</label> <span>{{result.residents}}</span><br>
                     <label>Films:</label><ul><li ng-repeat="film in result.films"> <a href="{{film}}">{{film}}</a></li></ul><br>
                     <button ng-click="vm.addToFavorites(result)">Add to Favorites</button>
             </div>
