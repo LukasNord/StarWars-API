@@ -52,7 +52,7 @@ router.get('/:label', (req,res)=>{
 
 router.delete('/:id', (req, res) => {
     let uniqueId = req.params.id;
-    Employee.findByIdAndRemove(
+    StarWarsFavorite.findByIdAndRemove(
         {"_id": uniqueId},
         // function(error, removed) 
         (error, removedDocument) => {

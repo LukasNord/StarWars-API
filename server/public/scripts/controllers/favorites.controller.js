@@ -15,7 +15,7 @@ myApp.controller('FavoritesController', ['SwapiService', function(SwapiService){
     self.deleteFavorite = function(favorite){
 
         console.log('favorite: ', favorite._id);
-        SwapiService.deleteFavorite(favorite_.id);
+        SwapiService.deleteFavorite(favorite._id);
 
     }
 

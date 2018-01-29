@@ -49,7 +49,7 @@ myApp.service('SwapiService', ['$http', function($http){
         
         $http.get('/favorites/people')
             .then( function(response){
-                console.log('get favorites people: ', response.data);
+                
                 
                 self.favorites.people.list = response.data;
 
@@ -60,7 +60,7 @@ myApp.service('SwapiService', ['$http', function($http){
             })
         $http.get('/favorites/species')
             .then( function(response){
-                console.log('get favorites species: ', response.data);
+                
                 
                 self.favorites.species.list = response.data
 
@@ -71,7 +71,7 @@ myApp.service('SwapiService', ['$http', function($http){
         })
         $http.get('/favorites/planets')
             .then( function(response){
-                console.log('get favorites planets: ', response.data);
+                
                 
                 self.favorites.planets.list = response.data;
 
@@ -83,8 +83,7 @@ myApp.service('SwapiService', ['$http', function($http){
 
         $http.get('/favorites/starships')
         .then( function(response){
-            console.log('get favorites: ', response.data);
-            
+         
             self.favorites.starships.list = response.data;
 
         })
@@ -93,9 +92,7 @@ myApp.service('SwapiService', ['$http', function($http){
             
         })
         $http.get('/favorites/vehicles')
-            .then( function(response){
-                console.log('get favorites: ', response.data);
-                
+            .then( function(response){ 
                 self.favorites.vehicles.list = response.data;
 
             })
@@ -105,8 +102,7 @@ myApp.service('SwapiService', ['$http', function($http){
         })
         $http.get('/favorites/films')
             .then( function(response){
-                console.log('get favorites: ', response.data);
-                
+                    
                 self.favorites.films.list = response.data;
 
             })
@@ -119,7 +115,7 @@ myApp.service('SwapiService', ['$http', function($http){
     self.getFavorites();
 
 
-    self.deleteFavorites = function(id){
+    self.deleteFavorite = function(id){
 
     
         $http.delete(`/favorites/${id}`)
