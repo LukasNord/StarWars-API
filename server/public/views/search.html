@@ -1,7 +1,8 @@
-<div>
+
+<div class="search-view">
     <h1>Search the Star Wars Universe</h1>
     <button ng-click="vm.searchFor(vm.selectedOption)">Search</button>
-<div>
+</div>
         <form validate name="searchForm">
                 <select  name="searchInput" ng-model="vm.selectedOption" ng-options="option.label for option in vm.options" required>
                         <option value="">-- Please Choose a Resource --</option>
@@ -10,6 +11,7 @@
                 <label >Search for:</label> <input type="text" ng-model="vm.selectedOption.searchValue" placeholder="search" required >
             </div>
         </form>
+<div>        
     <md-content class="content">
         <div ng-if="vm.toggle.people" class="flex-container wrap">
             <div class ="results-card" ng-repeat="result in vm.searchResults.list" flex>
