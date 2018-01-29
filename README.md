@@ -21,10 +21,12 @@ Clone repo and run npm install and open up on localhost:5000 in your browser.
 3.) Play controls for the Home video screen.  Can use ng-video for that.
 
 
-## Thoughts and Feels:
+## Retrospect:
 
-1.) Would arrange my DB differently to only store URLs, but I learned about indexing with Mongoose- so that was good.
+1.) Would arrange my DB differently to only store URLs, but I learned about indexing with Mongoose- so the journey was worth it. 
 
-2.) I like Material and want to imlement more of it across the project.
+2.) I like Material and want to implement more of it across the project.  
 
-3.) Breaking the cards into templates that get referenced based on resource type was clever and would help keep things a bit more organized and broken apart. 
+3.) Breaking the cards into templates that get referenced based on resource type was clever and would help keep things a bit more organized and broken apart. Learning about setting the ng-if to whether or not a property existed was a clever tactic I plan on using in the future.
+
+

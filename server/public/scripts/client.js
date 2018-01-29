@@ -1,6 +1,6 @@
 let myApp = angular.module('myApp', ['ngRoute', 'ngMaterial']);
 
-myApp.config(function($routeProvider) {
+myApp.config(function($routeProvider, $mdThemingProvider) {
     console.log('config loaded');
     // define our client side routes
     $routeProvider
@@ -20,5 +20,8 @@ myApp.config(function($routeProvider) {
         .otherwise(
             { redirectTo: '/home' }
         );
+
+        //  $mdThemingProvider.theme('default')
+        //  .dark();
     
 });

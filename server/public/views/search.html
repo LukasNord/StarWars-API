@@ -1,7 +1,7 @@
 
 <div class="search-view">
     <h1>Search the Star Wars Universe</h1>
-    <button ng-click="vm.searchFor(vm.selectedOption)">Search</button>
+    <md-button class="md-raised md-primary" ng-click="vm.searchFor(vm.selectedOption)">Search</md-button>
 </div>
         <form validate name="searchForm">
                 <select  name="searchInput" ng-model="vm.selectedOption" ng-options="option.label for option in vm.options" required>
