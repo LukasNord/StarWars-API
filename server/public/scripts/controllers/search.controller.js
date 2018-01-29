@@ -32,7 +32,7 @@ myApp.controller('SearchController', [ 'SwapiService','$mdDialog', '$mdToast' , 
 //Send search query and resource to the service
     self.searchFor = function(selectedOption){
         
-        //validation
+        //form validation-didn't quite get this far....
         
         
         //logic to control toggle.
@@ -88,7 +88,7 @@ myApp.controller('SearchController', [ 'SwapiService','$mdDialog', '$mdToast' , 
                     show.vehicles = true;
                     break;
             }//end switich
-        //send to service
+    //send to service
         SwapiService.searchSwapi(selectedOption.resource, selectedOption.searchValue);
          
     }//end searchFor
