@@ -19,3 +19,9 @@ Clone repo and run npm install and open up on localhost:5000 in your browser.
 2.) Use AngularMaterial for the card body on search and favorites.
 
 3.) Play controls for the Home video screen.  Can use ng-video for that.
+
+
+## Thoughts and Feels:
+
+1.) Would arrange my DB differently to only store URLs, but I learned about indexing with Mongoose- so that was good.
+2.) I like Material and want to imlement more of it across the project.
