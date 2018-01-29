@@ -24,4 +24,7 @@ Clone repo and run npm install and open up on localhost:5000 in your browser.
 ## Thoughts and Feels:
 
 1.) Would arrange my DB differently to only store URLs, but I learned about indexing with Mongoose- so that was good.
+
 2.) I like Material and want to imlement more of it across the project.
+
+3.) Breaking the cards into templates that get referenced based on resource type was clever and would help keep things a bit more organized and broken apart. 
