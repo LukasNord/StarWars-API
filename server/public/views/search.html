@@ -14,7 +14,7 @@
 <div>        
     <md-content class="content">
         <div ng-if="vm.toggle.people" class="flex-container wrap">
-            <div class ="results-card" ng-repeat="result in vm.searchResults.list" flex>
+            <div class ="results-card" ng-repeat="result in vm.searchResults.list track by $index" flex>
                 <label>Name:</label> <span>{{result.name}}</span><br>
                 <label>Birth Year:</label> <span>{{result.birth_year}}</span><br>
                 <label>Eye Color:</label> <span>{{result.eye_color}}</span><br>
@@ -32,7 +32,7 @@
         </div> 
         <div ng-if="vm.toggle.films" class="flex-container wrap">
         
-            <div class ="results-card" ng-repeat="result in vm.searchResults.list" flex>
+            <div class ="results-card" ng-repeat="result in vm.searchResults.list track by $index" flex>
                     <label>Title:</label> <span>{{result.title}}</span><br>
                     <label>Episode ID:</label> <span>{{result.episode_id}}</span><br>
                     <label>Opening Crawl:</label> <span>{{result.opening_crawl}}</span><br>
@@ -48,7 +48,7 @@
         </div>
         <div ng-if="vm.toggle.species" class="flex-container wrap" >
             
-            <div class ="results-card" ng-repeat="result in vm.searchResults.list" flex>
+            <div class ="results-card" ng-repeat="result in vm.searchResults.list track by $index" flex>
                     <label>Name:</label> <span>{{result.name}}</span><br>
                     <label>Classification:</label> <span>{{result.classification}}</span><br>
                     <label>Designation:</label> <span>{{result.designation}}</span><br>
@@ -64,7 +64,7 @@
         </div> 
         <div ng-if="vm.toggle.starships" class="flex-container wrap">
             
-            <div class ="results-card" ng-repeat="result in vm.searchResults.list" flex>
+            <div class ="results-card" ng-repeat="result in vm.searchResults.list track by $index" flex>
                     <label>Name:</label> <span>{{result.name}}</span><br>
                     <label>Model:</label> <span>{{result.model}}</span><br>
                     <label>Starship Class:</label> <span>{{result.starship_class}}</span><br>
@@ -81,7 +81,7 @@
         </div>
         <div ng-if="vm.toggle.vehicles" class="flex-container wrap">
             
-            <div class ="results-card" ng-repeat="result in vm.searchResults.list">
+            <div class ="results-card" ng-repeat="result in vm.searchResults.list track by $index">
                     <label>Name:</label> <span>{{result.name}}</span><br>
                     <label>Model:</label> <span>{{result.model}}<br>
                     <label>Vehicle Class:</label> <span>{{result.vehicle_class}}</label><br>
@@ -97,7 +97,7 @@
         </div>
         <div ng-if="vm.toggle.planets" class="flex-container wrap">
             
-            <div class ="results-card" ng-repeat="result in vm.searchResults.list">
+            <div class ="results-card" ng-repeat="result in vm.searchResults.list track by $index">
                     <label>Name:</label> <span>{{result.name}}</span><br>
                     <label>Diameter:</label> <span>{{result.diameter}}<span><br>
                     <label>Rotation Period:</label> <span>{{result.rotation_period}}</span><br>

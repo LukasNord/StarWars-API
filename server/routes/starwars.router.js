@@ -7,6 +7,7 @@ let starWarsSchema = new mongoose.Schema(
       //schema method takes in an object.
     {   
        
+       
 
             
     }, { strict: false }
@@ -20,7 +21,7 @@ let StarWarsFavorite = mongoose.model('starWarsFavorite', starWarsSchema);  //de
 router.post('/', (req, res) => {
     console.log('data to save: ', req.body);
     let favoriteToAdd = new StarWarsFavorite(req.body);
-
+    favoriteToAdd.isNew = true;
     favoriteToAdd.save((error, savedFavorite) => {
         if (error) {
             console.log('error on save: ', error);
