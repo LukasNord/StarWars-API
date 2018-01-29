@@ -11,5 +11,14 @@ myApp.controller('FavoritesController', ['SwapiService', function(SwapiService){
     
     SwapiService.getFavorites();
 
+   
+    self.deleteFavorite = function(favorite){
+
+        console.log('favorite: ', favorite._id);
+        SwapiService.deleteFavorite(favorite_.id);
+
+    }
+
+    
 
 }]);

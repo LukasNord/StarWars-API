@@ -119,7 +119,20 @@ myApp.service('SwapiService', ['$http', function($http){
     self.getFavorites();
 
 
+    self.deleteFavorites = function(id){
 
+    
+        $http.delete(`/favorites/${id}`)
+            .then(function (response) {
+                 console.log('get response', response);
+                self.getFavorites();
+            })
+            .catch(function (response) {
+                console.log('error on delete game', response);
+            });
+       
+
+    }
 
 
 

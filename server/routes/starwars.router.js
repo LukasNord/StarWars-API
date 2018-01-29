@@ -40,7 +40,7 @@ router.get('/:label', (req,res)=>{
 //find all in database based on label
     StarWarsFavorite.find({"label": label }, (error, data)=>{
         if (error) {
-            console.log(,'label: ', label, 'error on find: ', error);
+            console.log('label: ', label, 'error on find: ', error);
             res.sendStatus(500);
         } else {
             console.log('get all favorites: ', data);
@@ -49,6 +49,32 @@ router.get('/:label', (req,res)=>{
         }
     });
 });
+
+router.delete('/:id', (req, res) => {
+    let uniqueId = req.params.id;
+    Employee.findByIdAndRemove(
+        {"_id": uniqueId},
+        // function(error, removed) 
+        (error, removedDocument) => {
+            if (error) {
+                console.log('error on remove: ', error);
+                res.sendStatus(500);
+            } else {
+                // console.log('Document we removed: ', removedDocument);
+                res.sendStatus(200);
+            }
+        }
+    )
+});
+
+
+
+
+
+
+
+
+
 
 
 module.exports = router;
