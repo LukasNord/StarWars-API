@@ -48,65 +48,64 @@
             
             <div class ="results-card" ng-repeat="result in vm.searchResults.list" flex>
                     <label>Name:</label> <label>{{result.name}}</label><br>
-                    <label>Classification:</label> <label>{{result.classification}}</label><br>
-                    <label>Designation:</label> <label>{{result.designation}}</label><br>
-                    <label>Average Height:</label> <label>{{result.average_height}}</label><br>
-                    <label>Skin Colors:</label> <label>{{result.skin_colors}}</label><br>
-                    <label>Hair Colors:</label> <label>{{result.hair_colors}}</label><br>
-                    <label>Homeworld:</label> <label>{{result.homeworld}}</label><br>
-                    <label>Language:</label> <label>{{result.language}}</label><br>
+                    <label>Classification:</label> <span>{{result.classification}}</span><br>
+                    <label>Designation:</label> <span>{{result.designation}}</laspanbr>
+                    <label>Average Height:</label> <span>{{result.average_height}}spanel><br>
+                    <label>Skin Colors:</label> <span>{{result.skin_colors}}</span><br>
+                    <label>Hair Colors:</label> <span>{{result.hair_colors}}</label><br>
+                    <label>Homeworld:</label> <span>{{result.homeworld}}</span><br>
+                    <label>Language:</label> <span>{{result.language}}</span><br>
                     <label>People:</label><ul><li ng-repeat="person in result.people"> <a href="{{person}}">{{person}}</a></li></ul><br>
                     <label>Films:</label><ul><li ng-repeat="film in result.films"> <a href="{{film}}">{{film}}</a></li></ul><br>
                     <button ng-click="vm.addToFavorites(result)">Add to Favorites</button>
             </div>
         </div> 
         <div ng-if="vm.toggle.starships" class="flex-container wrap">
-            <h1>Starships go here</h1>
+            
             <div class ="results-card" ng-repeat="result in vm.searchResults.list" flex>
-                    <label>Name:</label> <label>{{result.name}}</label><br>
-                    <label>Model:</label> <label>{{result.model}}</label><br>
-                    <label>Starship Class:</label> <label>{{result.starship_class}}</label><br>
-                    <label>Manufacturer:</label> <label>{{result.manufacturer}}</label><br>
-                    <label>Cost in Credits:</label> <label>{{result.cost_in_credits}}</label><br>
-                    <label>Length:</label> <label>{{result.length}}</label><br>
-                    <label>Crew:</label> <label>{{result.crew}}</label><br>
-                    <label>Max Atmosphering Speed:</label> <label>{{result.max_atmosphering_speed}}</label><br>
-                    <label>Hyperdrive Rating:</label> <label>{{result.hyperdrive_rating}}</label><br>
-                    <label>Cargo Capacity:</label> <label>{{result.cargo_capacity}}</label><br>
+                    <label>Name:</label> <span>{{result.name}}</span><br>
+                    <label>Model:</label> <span>{{result.model}}</span><br>
+                    <label>Starship Class:</label> <span>{{result.starshipspans}}</label><br>
+                    <label>Manufacturer:</label> <span>{{result.manufacspan}}</label><br>
+                    <label>Cost in Credits:</label> <span>{{result.cost_ispandits}}</label><br>
+                    <label>Length:</label> <span>{{result.lengtspanlabel><br>
+                    <label>Crew:</label> <span>{{result.crewspanabel><br>
+                    <label>Max Atmosphering Speed:</label> <span>{{result.maxspansphering_speed}}</label><br>
+                    <label>Hyperdrive Rating:</label> <span>{{result.hyspanive_rating}}</label><br>
+                    <label>Cargo Capacity:</label> <span>{{result.cspancapacity}}</label><br>
                     <label>Films:</label><ul><li ng-repeat="film in result.films"> <a href="{{film}}">{{film}}</a></li></ul><br>
                     <button ng-click="vm.addToFavorites(result)">Add to Favorites</button>
             </div>
         </div>
         <div ng-if="vm.toggle.vehicles" class="flex-container wrap">
-            <h1>Vehicles go here</h1>
+            
             <div class ="results-card" ng-repeat="result in vm.searchResults.list">
-                    <label>Name:</label> <label>{{result.name}}</label><br>
-                    <label>Model:</label> <label>{{result.model}}</label><br>
-                    <label>Vehicle Class:</label> <label>{{result.vehicle_class}}</label><br>
-                    <label>Manufacturer:</label> <label>{{result.manufacturer}}</label><br>
-                    <label>Cost in Credits:</label> <label>{{result.cost_in_credits}}</label><br>
-                    <label>Length:</label> <label>{{result.length}}</label><br>
-                    <label>Crew:</label> <label>{{result.crew}}</label><br>
-                    <label>Max Atmosphering Speed:</label> <label>{{result.max_atmosphering_speed}}</label><br>
-                    <label>Hyperdrive Rating:</label> <label>{{result.hyperdrive_rating}}</label><br>
-                    <label>Cargo Capacity:</label> <label>{{result.cargo_capacity}}</label><br>
+                    <label>Name:</label> <span>{{result.name}}</span><br>
+                    <label>Model:</label> <span>{{result.model}}><br>
+                    <label>Vehicle Class:</label> <span>{{result.vehicle_class}}</label><br>
+                    <label>Manufacturer:</label> <span>{{result.manufacturer}}</label><br>
+                    <label>Cost in Credits:</label> <span>{{result.cost_in_credits}}</label><br>
+                    <label>Length:</label> <span>{{result.length}}</label><br>
+                    <label>Crew:</label> <span>{{result.crew}}</label><br>
+                    <label>Max Atmosphering Speed:</label> <span>{{result.max_atmosphering_speed}}</label><br>
+                    <label>Cargo Capacity:</label> <span>{{result_capacity}}</label><br>
                     <label>Films:</label><ul><li ng-repeat="film in result.films"> <a href="{{film}}">{{film}}</a></li></ul><br>
                     <button ng-click="vm.addToFavorites(result)">Add to Favorites</button>
             </div>
         </div>
         <div ng-if="vm.toggle.planets" class="flex-container wrap">
-            <h1>Planets go here</h1>
+            
             <div class ="results-card" ng-repeat="result in vm.searchResults.list">
-                    <label>Name:</label> <label>{{result.name}}</label><br>
-                    <label>Diameter:</label> <label>{{result.diameter}}</label><br>
-                    <label>Rotation Period:</label> <label>{{result.rotation_period}}</label><br>
-                    <label>Orbital Period:</label> <label>{{result.orbital_period}}</label><br>
-                    <label>Gravity:</label> <label>{{result.gravity}}</label><br>
-                    <label>Population:</label> <label>{{result.population}}</label><br>
-                    <label>Climate:</label> <label>{{result.climate}}</label><br>
-                    <label>Terrain:</label> <label>{{result.terrain}}</label><br>
-                    <label>Surface Water:</label> <label>{{result.surface_water}}</label><br>
-                    <label>Residents:</label> <label>{{result.residents}}</label><br>
+                    <label>Name:</label> <span>{{result.name}}</span><br>
+                    <label>Diameter:</label> <span>{{result.diametespanlabel><br>
+                    <label>Rotation Period:</label> <span>{{result.rotatispanriod}}</label><br>
+                    <label>Orbital Period:</label> <span>{{result.orbitspanriod}}</label><br>
+                    <label>Gravity:</label> <span>{{result.gravity}}</span><br>
+                    <label>Population:</label> <span>{{result.populationspanabel><br>
+                    <label>Climate:</label> <span>{{result.climate}}spanel><br>
+                    <label>Terrain:</label> <span>{{result.terrain}spanbel><br>
+                    <label>Surface Water:</label> <span>{{result.surfacespanr}}</label><br>
+                    <label>Residents:</label> <span>{{result.residespan</label><br>
                     <label>Films:</label><ul><li ng-repeat="film in result.films"> <a href="{{film}}">{{film}}</a></li></ul><br>
                     <button ng-click="vm.addToFavorites(result)">Add to Favorites</button>
             </div>
