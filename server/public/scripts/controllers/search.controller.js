@@ -32,7 +32,12 @@ myApp.controller('SearchController', [ 'SwapiService','$mdDialog', '$mdToast' , 
 //Send search query and resource to the service
     self.searchFor = function(selectedOption){
         
-        //form validation-didn't quite get this far....
+        //form validation-didn't quite get this far.
+        /* 
+            Would like to toggle hide/show for the resource that has been selected due to using that 
+            value when I send the object to the database.
+            This won't be an issue when I convert the DB to only save the _id and URL then have Swapi.co supply the data.
+        */
         
         
         //logic to control toggle.

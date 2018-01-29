@@ -4,13 +4,8 @@ const mongoose = require('mongoose');
 
 //Define our Schema- how an object should look when stored in our collection
 let starWarsSchema = new mongoose.Schema(  
-      //schema method takes in an object.
-    {   
-       
-       
-
-            
-    }, { strict: false }
+      //schema method takes in an object with any properties.
+    {      }, { strict: false }
 
 );//end Schema
 
