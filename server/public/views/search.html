@@ -107,7 +107,7 @@
                     <label>Climate:</label> <span>{{result.climate}}<span><br>
                     <label>Terrain:</label> <span>{{result.terrain}}<span><br>
                     <label>Surface Water:</label> <span>{{result.surface_water}}</span><br>
-                    <label>Residents:</label> <span>{{result.residents}}</span><br>
+                    <label>Residents:</label> <ul><li ng-repeat="resident in result.residents"> <a href="{{resident}}">{{resident}}</a></li></ul><br>
                     <label>Films:</label><ul><li ng-repeat="film in result.films"> <a href="{{film}}">{{film}}</a></li></ul><br>
                     <button ng-click="vm.addToFavorites(result)">Add to Favorites</button>
             </div>
