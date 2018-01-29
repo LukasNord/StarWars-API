@@ -1,6 +1,55 @@
 .results-card{
     border: 1px solid black;
-    margin: 2px;
+    margin: 5px;
     display: center;
+    background: white;
+    padding: 5px;
 
 }
+.body-title{
+    text-align: center;
+    background: black;
+    color: white;
+
+
+}
+.grid {
+    flex-wrap:wrap;
+    width:100px;
+}
+
+.flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: 1px solid silver;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+  }
+  .wrap    { 
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  } 
+
+  .content{
+    background-color: gray;
+
+  }
+
+  label{
+
+    font-weight: bold;
+
+
+
+
+  }
+  h1{
+
+    text-align: center;
+  }

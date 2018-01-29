@@ -1,4 +1,4 @@
-myApp.controller('SearchController', [ 'SwapiService', function(SwapiService){
+myApp.controller('SearchController', [ 'SwapiService','$mdDialog', '$mdToast' , function(SwapiService, $mdDialog, $mdToast){
     console.log('searchController up');
     let self = this;
 

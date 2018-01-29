@@ -1,95 +1,104 @@
-<div>
-    <h2>People</h2>
+
+<h1>Favorites</h1>
+
+<h2>People</h2>
+<div class="flex-container wrap">
+    
     <div class ="results-card" ng-repeat="favorite in vm.favorites.people.list">
         <button ng-click="vm.deleteFavorite(favorite)">Delete Favorite</button>
-        <label>Name:</label> <label>{{favorite.name}}</label><br>
-        <label>Birth Year:</label> <label>{{favorite.birth_year}}</label><br>
-        <label>Eye Color:</label> <label>{{favorite.eye_color}}</label><br>
-        <label>Gender:</label> <label>{{favorite.gender}}</label><br>
-        <label>Hair Color:</label><label>{{favorite.hair_color}}</label><br>
-        <label>Height:</label> <label>{{favorite.height}}</label><br>
+        <label>Name:</label> <span>{{favorite.name}}</span><br>
+        <label>Birth Year:</label> <span>{{favorite.birth_year}}</span><br>
+        <label>Eye Color:</label> <span>{{favorite.eye_color}}</span><br>
+        <label>Gender:</label> <span>{{favorite.gender}}</span><br>
+        <label>Hair Color:</label><span>{{favorite.hair_color}}</span><br>
+        <label>Height:</label> <span>{{favorite.height}}</span><br>
         <label>Homeworld:</label> <a href="{{favorite.homeworld}}">{{favorite.homeworld}}</a><br>
-        <label>Mass:</label> <label>{{favorite.mass}}</label><br>
-        <label>Species:</label> <label>{{favorite.species}}</label><br>
+        <label>Mass:</label> <span>{{favorite.mass}}</span><br>
+        <label>Species:</label> <span>{{favorite.species}}</span><br>
         
     </div>
 </div> 
-<div> 
-    <h2>Species</h2>
+<h2>Species</h2>
+<div class="flex-container wrap"> 
+    
     <div class ="results-card" ng-repeat="favorite in vm.favorites.species.list">
         <button ng-click="vm.deleteFavorite(favorite)">Delete Favorite</button>
         <label>Name:</label> <label>{{favorite.name}}</label><br>
-            <label>Classification:</label> <label>{{favorite.classification}}</label><br>
-            <label>Designation:</label> <label>{{favorite.designation}}</label><br>
-            <label>Average Height:</label> <label>{{favorite.average_height}}</label><br>
-            <label>Skin Colors:</label> <label>{{favorite.skin_colors}}</label><br>
-            <label>Hair Colors:</label> <label>{{favorite.hair_colors}}</label><br>
-            <label>Homeworld:</label> <label>{{favorite.homeworld}}</label><br>
-            <label>Language:</label> <label>{{favorite.language}}</label><br>
+            <label>Classification:</label> <span>{{favorite.classification}}</span><br>
+            <label>Designation:</label> <span>{{favorite.designation}}</span><br>
+            <label>Average Height:</label> <span>{{favorite.average_height}}</span><br>
+            <label>Skin Colors:</label> <span>{{favorite.skin_colors}}</span><br>
+            <label>Hair Colors:</label> <span>{{favorite.hair_colors}}</span><br>
+            <label>Homeworld:</label> <a href="{{favorite.homeworld}}">{{favorite.homeworld}}</a><br>
+            <label>Language:</label> <span>{{favorite.language}}</span><br>
         
     </div>
 </div>
-<div>
-    <h2>Planets</h2>
+<h2>Planets</h2>
+<div class="flex-container wrap">
+    
     <div class ="results-card" ng-repeat="favorite in vm.favorites.planets.list">
         <button ng-click="vm.deleteFavorite(favorite)">Delete Favorite</button>
-        <label>Name:</label> <label>{{favorite.name}}</label><br>
-            <label>Diameter:</label> <label>{{favorite.diameter}}</label><br>
-            <label>Rotation Period:</label> <label>{{favorite.rotation_period}}</label><br>
-            <label>Orbital Period:</label> <label>{{favorite.orbital_period}}</label><br>
-            <label>Gravity:</label> <label>{{favorite.gravity}}</label><br>
-            <label>Population:</label> <label>{{favorite.population}}</label><br>
-            <label>Climate:</label> <label>{{favorite.climate}}</label><br>
-            <label>Terrain:</label> <label>{{favorite.terrain}}</label><br>
-            <label>Surface Water:</label> <label>{{favorite.surface_water}}</label><br>
-            <label>Residents:</label> <label>{{favorite.residents}}</label><br>
+        <label>Name:</label> <span>{{favorite.name}}</span><br>
+            <label>Diameter:</label> <span>{{favorite.diameter}}</span><br>
+            <label>Rotation Period:</label> <span>{{favorite.rotation_period}}</span><br>
+            <label>Orbital Period:</label> <span>{{favorite.orbital_period}}</span><br>
+            <label>Gravity:</label> <span>{{favorite.gravity}}</span><br>
+            <label>Population:</label> <span>{{favorite.population}}</span><br>
+            <label>Climate:</label> <span>{{favorite.climate}}</span><br>
+            <label>Terrain:</label> <span>{{favorite.terrain}}</span><br>
+            <label>Surface Water:</label> <span>{{favorite.surface_water}}</span><br>
+            <label>Residents:</label><ul ng-repeat="resident in favorite.residents"><li > <a href="{{resident}}">{{resident}}</a></li></ul><br>
     </div>
 </div>
-<div>
-    <h2>Starships</h2>
+<h2>Starships</h2>
+<div class="flex-container wrap">
+    
     <div class ="results-card" ng-repeat="favorite in vm.favorites.starships.list">
        <button ng-click="vm.deleteFavorite(favorite)">Delete Favorite</button>
-        <label>Name:</label> <label>{{favorite.name}}</label><br>
-            <label>Model:</label> <label>{{favorite.model}}</label><br>
-            <label>Starship Class:</label> <label>{{favorite.starship_class}}</label><br>
-            <label>Manufacturer:</label> <label>{{favorite.manufacturer}}</label><br>
-            <label>Cost in Credits:</label> <label>{{favorite.cost_in_credits}}</label><br>
-            <label>Length:</label> <label>{{favorite.length}}</label><br>
-            <label>Crew:</label> <label>{{favorite.crew}}</label><br>
-            <label>Max Atmosphering Speed:</label> <label>{{favorite.max_atmosphering_speed}}</label><br>
-            <label>Hyperdrive Rating:</label> <label>{{favorite.hyperdrive_rating}}</label><br>
-            <label>Cargo Capacity:</label> <label>{{favorite.cargo_capacity}}</label><br>   
+        <label>Name:</label> <span>{{favorite.name}}</span><br>
+            <label>Model:</label> <span>{{favorite.model}}</span><br>
+            <label>Starship labels:</label> <span>{{favorite.starship_class}}</span><br>
+            <label>Manufacturer</label> <span>{{favorite.manufacturer}}</span><br>
+            <label>Cost in Crelabel:</label> <span>{{favorite.cost_in_credits}}</span><br>
+            <label>Length:</label><span>{{favorite.length}}</span><br>
+            <label>Crew:</label> <span>{{favorite.crew}}</span><br>
+            <label>Max Atmospherilabelpeed:</label> <span>{{favorite.max_atmosphering_speed}}</span><br>
+            <label>Hyperdrive Rating </label> <span>{{favorite.hyperdrive_rating}}</span><br>
+            <label>Cargo Capacity:<label> <span>{{favorite.cargo_capacity}}</span><br>   
     </div>
 </div>
-<div>
-    <h2>Vehicles</h2>
+<h2>Vehicles</h2>
+<div class="flex-container wrap">
+    
     <div class ="results-card" ng-repeat="favorite in vm.favorites.vehicles.list">
         <button ng-click="vm.deleteFavorite(favorite)">Delete Favorite</button>
-        <label>Name:</label> <label>{{favorite.name}}</label><br>
-        <label>Model:</label> <label>{{favorite.model}}</label><br>
-        <label>Vehicle Class:</label> <label>{{favorite.vehicle_class}}</label><br>
-        <label>Manufacturer:</label> <label>{{favorite.manufacturer}}</label><br>
-        <label>Cost in Credits:</label> <label>{{favorite.cost_in_credits}}</label><br>
-        <label>Length:</label> <label>{{favorite.length}}</label><br>
-        <label>Crew:</label> <label>{{favorite.crew}}</label><br>
-        <label>Max Atmosphering Speed:</label> <label>{{favorite.max_atmosphering_speed}}</label><br>
-        <label>Hyperdrive Rating:</label> <label>{{favorite.hyperdrive_rating}}</label><br>
-        <label>Cargo Capacity:</label> <label>{{favorite.cargo_capacity}}</label><br>
+        <label>Name:</label> <span>{{favorite.name}}</span><br>
+        <label>Model:</label> <span>{{favorite.model}}</span><br>
+        <label>Vehicle Clabel:</label> <span>{{favorite.vehicle_class}}</span><br>
+        <label>Manufactur</label><span>{{favorite.manufacturer}}</span><br>
+        <label>Cost in Crelabel:</label><span>{{favorite.cost_in_credits}}</span><br>
+        <label>Length:</label><span>{{labelrite.length}}</span><br>
+        <label>Crew:</label><span>{{favolabel.crew}}</span><br>
+        <label>Max Atmospherial Speed:</label><span>{{favorite.max_atmosphering_speed}}</span><br>
+        <label>Hyperdrive Rating</label><span>{favorite.hyperdrive_rating}}</span><br>
+        <label>Cargo Capacity:<labeln> <span>{{labelrite.cargo_capacity}}</span><br>
     </div>
 </div>
-<div>
-    <h2>Films</h2>
+<h2>Films</h2>
+<div class="flex-container wrap">
+    
     <div class ="results-card" ng-repeat="favorite in vm.favorites.films.list">
         <button ng-click="vm.deleteFavorite(favorite)">Delete Favorite</button>
-        <label>Title:</label> <label>{{favorite.title}}</label><br>
-        <label>Episode ID:</label> <label>{{favorite.episode_id}}</label><br>
-        <label>Opening Crawl:</label> <label>{{favorite.opening_crawl}}</label><br>
-        <label>Director:</label> <label>{{favorite.director}}</label><br>
-        <label>Producer:</label> <label>{{favorite.producer}}</label><br>
-        <label>Release Date</label> <label>{{favorite.release_date}}</label><br>
-        <label>Characters:</label><ul ng-if="vm.hide.characters"><li ng-repeat="character in favorite.characters"> <a href="{{character}}">{{character}}</a></li></ul><br>
-        <label>Planets:</label><ul ng-if="!vm.hide.planets"><li ng-repeat="planet in favorite.planets"> <a href="{{planet}}">{{planet}}</a></li></ul><br>
-        <label>Starships:</label><ul ng-if="!vm.hide.starships"><li ng-repeat="ship in favorite.starships"> <a href="{{ship}}">{{ship}}</a></li></ul><br>
-        <label>Vehicles:</label><ul ng-if="!vm.hide.vehicles"><li ng-repeat="vehicle in favorite.vehicles"> <a href="{{vehicle}}">{{vehicle}}</a></li></ul><br>   
+        <label>Title:</label> <span>{{favorite.title}}</span><br>
+        <label>Episode ID:</label> <span>{{favorite.episode_id}}</span><br>
+        <label>Opening Crawl:</label> <span>{{favorite.opening_crawl}}</span><br>
+        <label>Director:</label> <span>{{favorite.director}}</span><br>
+        <label>Producer:</label> <span>{{favorite.producer}}</span><br>
+        <label>Release Date</label> <span>{{favorite.release_date}}</span><br>
+        <label>Characters:</label><ul><li ng-repeat="character in favorite.characters"> <a href="{{character}}">{{character}}</a></li></ul><br>
+        <label>Planets:</label><ul><li ng-repeat="planet in favorite.planets"> <a href="{{planet}}">{{planet}}</a></li></ul><br>
+        <label>Starships:</label><ul><li ng-repeat="ship in favorite.starships"> <a href="{{ship}}">{{ship}}</a></li></ul><br>
+        <label>Vehicles:</label><ul><li ng-repeat="vehicle in favorite.vehicles"> <a href="{{vehicle}}">{{vehicle}}</a></li></ul><br>   
     </div>
 </div>

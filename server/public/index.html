@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" href="/styles/client.css">
     <script src="/vendors/angular.min.js" charset="utf-8"></script>
@@ -26,9 +27,10 @@
    
     <title>Star Wars!</title>
 </head>
-<body ng-app="myApp">
+<body ng-app="myApp" class="mat-app-background" >
+    <h1 class="body-title">SWAPI Search App</h1>
     <nav ng-include="'/views/templates/nav.html'"></nav>
-    <h1>SWAPI Search App</h1>
+    
 
 
     <ng-view>
