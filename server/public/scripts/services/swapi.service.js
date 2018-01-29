@@ -25,6 +25,7 @@ myApp.service('SwapiService', ['$http', function($http){
         
         $http.get(`https://www.swapi.co/api/${resource}`, config)
             .then( function(response){
+            console.log('swapi results: ', response.data.results);
             
             self.searchResults.list = response.data.results;       
         })
